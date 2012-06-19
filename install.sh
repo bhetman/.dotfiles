@@ -18,6 +18,10 @@ do
     continue
   fi
   ln -s "$PWD/$file" "$HOME"
+  ret=$?
+  if [[ $ret -gt 0 ]]; then
+    echo "Could not create symlink for $file (ln returned $ret)."
+  fi
 done
 
 exit 0
