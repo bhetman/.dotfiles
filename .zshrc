@@ -5,6 +5,13 @@ SAVEHIST=1000
 setopt incappendhistory
 # End of lines configured by zsh-newuser-install
 
+# Turn stderr (fd 2) red. See https://github.com/sickill/stderred for more. To
+# enable set $stderreddir to the location of the libstderred.so shared object.
+stderreddir="$HOME/src/stderred/build/libstderred.so"
+if [[ -e $stderreddir ]]; then
+  export LD_PRELOAD=$stderreddir${LD_PRELOAD:+:$LD_PRELOAD}
+fi
+
 # For fortune on login (only for non root)
 if [[ ! $UID -eq 0 ]]; then
   command fortune -a
