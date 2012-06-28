@@ -8,6 +8,8 @@ set shortmess+=I
 if has('gui_running')
   " Remove the toolbar
   set guioptions-=T
+  " Remove the menubar
+  set guioptions-=m
 endif
 
 " Create undo file
