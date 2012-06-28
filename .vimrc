@@ -1,44 +1,44 @@
-" allow manpage browsing from within vim
+" Allow manpage browsing from within Vim
 "let $PAGER=''
 runtime ftplugin/man.vim
 
-" remove the startup splash
+" Remove the startup splash
 set shortmess+=I
 
 if has('gui_running')
-  " remove the toolbar
+  " Remove the toolbar
   set guioptions-=T
 endif
 
-" create undo file
+" Create undo file
 set undofile
 
-" allow backspacing over autoindent, line breaks, and the start of insert
+" Allow backspacing over autoindent, line breaks, and the start of insert
 set backspace=indent,eol,start
 
-" allow editing of new buffers when unsaved buffers exist
+" Allow editing of new buffers when unsaved buffers exist
 set hidden
 
-" ruler
+" Always show the ruler
 set ruler
 
-" show commands entered in normal mode
+" Show commands entered in normal mode
 set showcmd
 
-" when doing command completion (with tab) show longest match first with a
-" list, then full matches
+" When doing command completion (with tab) show the longest available match
+" first, then complete full matches
 set wildmode=longest,full
 
-" relative line numbering
+" Relative line numbering
 set relativenumber
 
-" highlight search matches
+" Highlight search matches
 set hlsearch
 
-" instant search
+" Incrementally search
 set incsearch
 
-" make global substitution default (the g flag now disables global substitution)
+" Make global substitution default (the g flag now disables global substitution)
 set gdefault
 
 " Initialize variables for changing cursor shape. This would be a good place
@@ -63,25 +63,25 @@ elseif &term == "konsole"
   "let &t_EI = \"\<Esc>[?6c"
 endif
 
-" filetype detection, filetype plugins, and filetype indentation
+" Enable Filetype detection, filetype plugins, and filetype indentation
 filetype plugin indent on
 
-" syntax highlighting
+" Enable syntax highlighting
 syntax on
 
-" syntax based folding
+" Use syntax based folding
 set foldmethod=syntax
 
-" don't auto close folds
+" Don't auto close folds
 set foldlevelstart=99
 
-" Omni Complete
+" Enable Omni Complete
 set omnifunc=syntaxcomplete#Complete
 
-" colorscheme
+" Set the colorscheme
 colorscheme murphy
 
-" spelling
+" Enable Spelling
 set spell
 set spelllang=en_us
 
