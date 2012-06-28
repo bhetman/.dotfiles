@@ -12,6 +12,13 @@ if has('gui_running')
   set guioptions-=m
 endif
 
+" Enable UTF-8 editing
+if has("multi_byte")
+  set encoding=utf-8
+  setglobal fileencoding=utf-8
+  set fileencodings=utf-8
+endif
+
 " Create undo file
 set undofile
 
