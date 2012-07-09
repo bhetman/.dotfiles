@@ -139,15 +139,11 @@ function update-cursor () {
 }
 
 function init-cursor () {
-  # Note: The escape sequence for konsole was discovered via:
-  # $(which konsoleprofile) "CursorShape=$shape" > tmpfile
-  # Where $shape is 0 for block and 2 for underline. A similar trick would
-  # likely work for gnome terminal.
   case "$TERM" in
     (xterm) block="\033[1 q";underline="\033[3 q";;
     (konsole)
-      block="\033]50;CursorShape=0";
-      underline="\033]50;CursorShape=2";;
+      block=$($(which konsoleprofile) "CursorShape=0");
+      underline=$($(which konsoleprofile) "CursorShape=2");;
     (linux) block="\e[?6c";underline="\e[?2c";;
     (*) block="";underline="";;
   esac
