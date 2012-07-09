@@ -102,19 +102,20 @@ alias grep='grep --color=auto'
 alias r='reset'
 
 ### VI MODE INDICATOR
-function update-cursor () {
-  # This allows vi bindings to indicate the current mode.
-  # For more info see man 5 terminfo, man 1M infocmp,
-  # man 1 tput, man 4 console_codes,
-  # and http://invisible-island.net/xterm/ctlseqs/ctlseqs.html
-  # Note: konsole's $TERM value must be 'konsole'; see below.
+# The functions update-cursor and init-cursor are called by zle-keymap-select,
+# zle-keymap-select, and zle-line-init. Together they indicate the current
+# mode when using vi key bindings. For more info see man 5 terminfo, man 1M
+# infocmp, man 1 tput, man 4 console_codes,
+# and http://invisible-island.net/xterm/ctlseqs/ctlseqs.html
+# Note: konsole's $TERM value must be 'konsole'; see below.
 
-  # By default konsole sets $TERM to xterm (I suspect this is for
-  # legacy and/or compatibility reasons). However, this hinders our ability
-  # to indicate the current mode, because konsole uses it's own method to
-  # change the cursor shape. Manually change konsole's environment settings
-  # to report 'konsole' in order to make this function work.
+# By default konsole sets $TERM to xterm (I suspect this is for
+# legacy and/or compatibility reasons). However, this hinders our ability
+# to indicate the current mode, because konsole uses it's own method to
+# change the cursor shape. Manually change konsole's environment settings
+# to report 'konsole' in order to make this function work.
  
+function update-cursor () {
   # Save the cursor position.
   case "$TERM" in 
     (konsole) ;& # Fall through.
