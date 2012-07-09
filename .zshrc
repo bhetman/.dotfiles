@@ -124,17 +124,10 @@ function update-cursor () {
   esac
 
   # Update the cursor shape.
-  if [[ "$TERM" == 'konsole' ]] then
-    case "$KEYMAP" in
-      (vicmd) $(which konsoleprofile) "CursorShape=$block";;
-      (viins|main) $(which konsoleprofile) "CursorShape=$underline";;
-    esac
-  else
-    case "$KEYMAP" in
-      (vicmd) echo -ne "$block";;
-      (viins|main) echo -ne "$underline";;
-    esac
-  fi
+  case "$KEYMAP" in
+    (vicmd) echo -ne "$block";;
+    (viins|main) echo -ne "$underline";;
+  esac
 
   # Restore the cursor position.
   case "$TERM" in
@@ -146,9 +139,15 @@ function update-cursor () {
 }
 
 function init-cursor () {
+  # Note: The escape sequence for konsole was discovered via:
+  # $(which konsoleprofile) "CursorShape=$shape" > tmpfile
+  # Where $shape is 0 for block and 2 for underline. A similar trick would
+  # likely work for gnome terminal.
   case "$TERM" in
     (xterm) block="\033[1 q";underline="\033[3 q";;
-    (konsole) block="0";underline="2";;
+    (konsole)
+      block="\033]50;CursorShape=0";
+      underline="\033]50;CursorShape=2";;
     (linux) block="\e[?6c";underline="\e[?2c";;
     (*) block="";underline="";;
   esac
