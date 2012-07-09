@@ -115,6 +115,7 @@ function update-cursor () {
   # change the cursor shape. Manually change konsole's environment settings
   # to report 'konsole' in order to make this function work.
  
+  # Save the cursor position.
   case "$TERM" in 
     (konsole) ;& # Fall through.
     (xterm) echo -ne "\033[s";;
@@ -122,6 +123,7 @@ function update-cursor () {
     (*) return;;
   esac
 
+  # Update the cursor shape.
   if [[ "$TERM" == 'konsole' ]] then
     case "$KEYMAP" in
       (vicmd) $(which konsoleprofile) "CursorShape=$block";;
@@ -134,6 +136,7 @@ function update-cursor () {
     esac
   fi
 
+  # Restore the cursor position.
   case "$TERM" in
     (konsole) ;& # Fall through.
     (xterm) echo -ne "\033[u";;
@@ -147,7 +150,7 @@ function init-cursor () {
     (xterm) block="\033[1 q";underline="\033[3 q";;
     (konsole) block="0";underline="2";;
     (linux) block="\e[?6c";underline="\e[?2c";;
-    (*) block="";underline="";return;;
+    (*) block="";underline="";;
   esac
 }
 
