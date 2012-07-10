@@ -142,8 +142,8 @@ function init-cursor () {
   case "$TERM" in
     (xterm) block="\033[1 q";underline="\033[3 q";;
     (konsole)
-      block=$($(which konsoleprofile) "CursorShape=0");
-      underline=$($(which konsoleprofile) "CursorShape=2");;
+      block=$(konsoleprofile "CursorShape=0");
+      underline=$(konsoleprofile "CursorShape=2");;
     (linux) block="\e[?6c";underline="\e[?2c";;
     (*) block="";underline="";;
   esac
