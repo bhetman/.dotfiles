@@ -99,7 +99,6 @@ eval $(dircolors -b)
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 alias ls='ls --color=auto --group-directories-first -x'
 alias grep='grep --color=auto'
-alias r='reset'
 
 ### VI MODE INDICATOR
 # The functions update-cursor and init-cursor are called by zle-keymap-select,
