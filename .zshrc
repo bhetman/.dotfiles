@@ -118,7 +118,7 @@ function update-cursor () {
   # Save the cursor position.
   case "$TERM" in 
     (konsole) ;& # Fall through.
-    (xterm) echo -ne "\033[s";;
+    (xterm*) echo -ne "\033[s";;
     (linux) echo -ne "\e[s";;
     (*) return;;
   esac
@@ -132,7 +132,7 @@ function update-cursor () {
   # Restore the cursor position.
   case "$TERM" in
     (konsole) ;& # Fall through.
-    (xterm) echo -ne "\033[u";;
+    (xterm*) echo -ne "\033[u";;
     (linux) echo -ne "\e[u";;
     (*) ;;
   esac
@@ -140,7 +140,7 @@ function update-cursor () {
 
 function init-cursor () {
   case "$TERM" in
-    (xterm) block="\033[1 q";underline="\033[3 q";;
+    (xterm*) block="\033[1 q";underline="\033[3 q";;
     (konsole)
       block=$(konsoleprofile "CursorShape=0");
       underline=$(konsoleprofile "CursorShape=2");;
