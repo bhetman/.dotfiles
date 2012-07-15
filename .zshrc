@@ -83,9 +83,9 @@ colors
 PS1="%{$fg[cyan]%U%}%m%{%u$reset_color%}\
 %(!.%{$fg[red]%}#%{$reset_color%}.>) "
 
-RPS1="%{$fg_bold[green]%}%~%{$reset_color%}\
-%(?..%{$fg_bold[red]%}(%?%)%{$reset_color%})\
-%(1j.%{$fg_bold[blue]%}:%j%{$reset_color%}.)"
+RPS1="%{$fg[green]%}%~%{$reset_color%}\
+%(?..%{$fg[red]%}(%?%)%{$reset_color%})\
+%(1j.%{$fg[blue]%}:%j%{$reset_color%}.)"
 
 zstyle ':completion:*' menu select
 zstyle ':completion:*' use-compctl false
