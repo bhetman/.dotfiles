@@ -50,26 +50,22 @@ set incsearch
 " Make global substitution default (the g flag now disables global substitution)
 set gdefault
 
-" Initialize variables for changing cursor shape. This would be a good place
-" to define cursor color
-"let &t_SI = \""
-"let &t_EI = \""
-" Change cursor shape based on Vim mode. This is terminal dependent
+" Change cursor shape based on Vim mode. This is terminal dependent.
+" This would be a good place to define cursor color
 if &term =~ '^xterm'
   let &t_SI = "\<Esc>[3 q"
   let &t_EI = "\<Esc>[1 q"
 elseif &term == "konsole"
   let &t_SI = "\<Esc>]50;CursorShape=2\x7"
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-" This should work for \"linux" but doesn't for some reason.
-" (remove the leading '\', obviously)
+" This should work for "linux" but doesn't for some reason.
 "elseif &term == "linux"
-  "let &t_SI = \"\033[?2c"
-  "let &t_EI = \"\033[?6c"
-  "let &t_SI = \"\e[?2c"
-  "let &t_EI = \"\e[?6c"
-  "let &t_SI = \"\<Esc>[?2c"
-  "let &t_EI = \"\<Esc>[?6c"
+  "let &t_SI = "\033[?2c"
+  "let &t_EI = "\033[?6c"
+  "let &t_SI = "\e[?2c"
+  "let &t_EI = "\e[?6c"
+  "let &t_SI = "\<Esc>[?2c"
+  "let &t_EI = "\<Esc>[?6c"
 endif
 
 " Enable Filetype detection, filetype plugins, and filetype indentation
