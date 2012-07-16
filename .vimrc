@@ -68,6 +68,11 @@ elseif &term == 'konsole'
   "let &t_EI = "\<Esc>[?6c"
 endif
 
+" When using the mouse to select text, don't select the line numbers.
+if &term != 'linux'
+  set mouse=a
+endif
+
 " Enable Filetype detection, filetype plugins, and filetype indentation
 filetype plugin indent on
 
