@@ -55,11 +55,11 @@ set gdefault
 if &term =~ '^xterm'
   let &t_SI = "\<Esc>[3 q"
   let &t_EI = "\<Esc>[1 q"
-elseif &term == "konsole"
+elseif &term == 'konsole'
   let &t_SI = "\<Esc>]50;CursorShape=2\x7"
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-" This should work for "linux" but doesn't for some reason.
-"elseif &term == "linux"
+" This should work for 'linux' but doesn't for some reason.
+"elseif &term == 'linux'
   "let &t_SI = "\033[?2c"
   "let &t_EI = "\033[?6c"
   "let &t_SI = "\e[?2c"
