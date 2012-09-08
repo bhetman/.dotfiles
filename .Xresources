@@ -42,12 +42,5 @@ XTerm*saveLines: 5096
 ! Blink on bell
 XTerm*bellIsUrgent: true
 
-! Disable automatic scrolling on output
-!XTerm*scrollTtyOutput: false
-!XTerm*multiScroll: true
-
-! Scroll to bottom on key press
-!XTerm*scrollKey: true
-
 ! Allow UTF-8 titles
 XTerm*utf8Title: true
