@@ -2,32 +2,6 @@
 Xcursor.theme: Neutral
 
 .font: -*-tamsyn-medium-*-*-*-12-*-*-*-*-*-*-*
-*.background: #1a1a1a
-*.foreground: #d6d6d6
-! Black
-*.color0: #1a1a1a 
-*.color8: #333333
-! Red
-*.color1: #9e1828
-*.color9: #cf6171
-! Green
-*.color2: #5cb247
-*.color10: #c5f779
-! Yellow
-*.color3: #d2bb4b
-*.color11: #e7db52
-! Blue
-*.color4: #324c80
-*.color12: #2b4f98
-! Magenta
-*.color5: #963c59
-*.color13: #cf9ebe
-! Cyan
-*.color6: #418179
-*.color14: #71bebe
-! White
-*.color7: #dddddd
-*.color15: #ffffff
 
 ! When using xterm, report 256colors to programs.
 XTerm*termName: xterm-256color

@@ -89,7 +89,7 @@ set foldlevelstart=99
 set omnifunc=syntaxcomplete#Complete
 
 " Set the colorscheme
-colorscheme murphy
+colorscheme Tomorrow-Night-Bright
 
 " Enable Spelling
 set spell
