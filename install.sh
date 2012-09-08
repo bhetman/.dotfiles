@@ -14,13 +14,14 @@ FILES=".vimrc
 # home directory.
 for file in $FILES
 do
-  if [[ ! -e $file ]]; then
-    continue
-  fi
-  ln -s "$PWD/$file" "$HOME"
-  ret=$?
-  if [[ $ret -gt 0 ]]; then
-    echo "Could not create symlink for $file (ln returned $ret)."
+  if [[ ! -e "$HOME/$file" ]]; then
+    echo -n "Linking $file..."
+    ln -s "$PWD/$file" "$HOME"
+    if [[ ret=$? -gt 0 ]]; then
+      echo -e "\tCould not create symlink for $file (ln returned $ret)."
+      continue
+    fi
+    echo "Success!"
   fi
 done
 
