@@ -26,8 +26,6 @@ xmodmap ~/.Xmodmap
 /usr/bin/xscreensaver -no-splash &
 
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
-#pacmd load-sample-lazy x11-bell /usr/share/sounds/KDE-Sys-App-Message.ogg
-#pacmd load-module module-x11-bell sample=x11-bell
 # exec gnome-session
 # exec startkde
 # exec startxfce4
