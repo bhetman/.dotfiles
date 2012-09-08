@@ -8,7 +8,11 @@
 FILES=".vimrc
 .zshrc
 .zshenv
-.nethackrc"
+.nethackrc
+.Xresources
+.xinitrc
+.Xmodmap
+.xbindkeysrc"
 
 # Loop over the files and (after checking for existence) link the file into the
 # home directory.
