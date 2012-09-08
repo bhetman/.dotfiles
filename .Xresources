@@ -1,0 +1,53 @@
+! Xcursor settings
+Xcursor.theme: Neutral
+
+.font: -*-tamsyn-medium-*-*-*-12-*-*-*-*-*-*-*
+*.background: #1a1a1a
+*.foreground: #d6d6d6
+! Black
+*.color0: #1a1a1a 
+*.color8: #333333
+! Red
+*.color1: #9e1828
+*.color9: #cf6171
+! Green
+*.color2: #5cb247
+*.color10: #c5f779
+! Yellow
+*.color3: #d2bb4b
+*.color11: #e7db52
+! Blue
+*.color4: #324c80
+*.color12: #2b4f98
+! Magenta
+*.color5: #963c59
+*.color13: #cf9ebe
+! Cyan
+*.color6: #418179
+*.color14: #71bebe
+! White
+*.color7: #dddddd
+*.color15: #ffffff
+
+! When using xterm, report 256colors to programs.
+XTerm*termName: xterm-256color
+
+! Use a large scroll buffer.
+XTerm*saveLines: 5096
+
+! Allow scroll single lines with shift-{up,down}.
+*VT100.Translations: #override Shift <Key>Up: scroll-back(1) \n\
+                               Shift <Key>Down: scroll-forw(1)
+
+! Blink on bell
+XTerm*bellIsUrgent: true
+
+! Disable automatic scrolling on output
+!XTerm*scrollTtyOutput: false
+!XTerm*multiScroll: true
+
+! Scroll to bottom on key press
+!XTerm*scrollKey: true
+
+! Allow UTF-8 titles
+XTerm*utf8Title: true
