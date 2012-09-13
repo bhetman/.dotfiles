@@ -19,6 +19,9 @@ if has("multi_byte")
   set fileencodings=utf-8
 endif
 
+" Set the colorscheme
+colorscheme Tomorrow-Night-Bright
+
 " Create undo file
 set undofile
 
@@ -78,6 +81,7 @@ filetype plugin indent on
 
 " Enable syntax highlighting
 syntax on
+syntax reset
 
 " Use syntax based folding
 set foldmethod=syntax
@@ -87,12 +91,6 @@ set foldlevelstart=99
 
 " Enable Omni Complete
 set omnifunc=syntaxcomplete#Complete
-
-" Set the colorscheme
-colorscheme Tomorrow-Night-Bright
-
-" I use dark terminals
-set background=dark
 
 " Enable Spelling
 set spell
