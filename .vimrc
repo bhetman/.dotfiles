@@ -91,9 +91,6 @@ set omnifunc=syntaxcomplete#Complete
 " Set the colorscheme
 colorscheme Tomorrow-Night-Bright
 
-" I use dark terminals
-set background=dark
-
 " Enable Spelling
 set spell
 set spelllang=en_us
