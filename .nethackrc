@@ -1,1 +1,2 @@
 OPTIONS=color, time, hilite_pet, !autopickup, suppress_alert:3.4.3
+OPTIONS=windowtype:tty, msg_window:c, msghistory:60
