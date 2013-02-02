@@ -23,7 +23,7 @@ xset fp rehash
 xset b 5 2800
 xbindkeys
 xmodmap ~/.Xmodmap
-/usr/bin/xscreensaver -no-splash &
+/usr/bin/xscreensaver -no-splash -no-capture-stderr &
 
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 [[ -f ~/src/tomorrow-theme/Xdefaults/XresourceTomorrowNightBright ]] &&
