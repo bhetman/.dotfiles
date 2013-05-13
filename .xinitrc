@@ -25,6 +25,7 @@ xset b 5 2800
 xbindkeys
 [[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
 /usr/bin/xscreensaver -no-splash -no-capture-stderr &
+/usr/bin/dunst &
 
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 [[ -f ~/.config/icscolorsv7 ]] && xrdb -merge ~/.config/icscolorsv7
