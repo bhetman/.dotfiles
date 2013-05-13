@@ -5,6 +5,10 @@ runtime ftplugin/man.vim
 " Remove the startup splash
 set shortmess+=I
 
+" Make Vim more responsive
+set timeoutlen=500
+set ttimeoutlen=100
+
 if has('gui_running')
   " Remove the toolbar
   set guioptions-=T
