@@ -26,8 +26,8 @@ xmodmap ~/.Xmodmap
 /usr/bin/xscreensaver -no-splash -no-capture-stderr &
 
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
-[[ -f ~/src/tomorrow-theme/Xdefaults/XresourceTomorrowNightBright ]] &&
-  xrdb -merge ~/src/tomorrow-theme/Xdefaults/XresourceTomorrowNightBright
+[[ -f ~/.config/icscolorsv7 ]] && xrdb -merge ~/.config/icscolorsv7
+
 # exec gnome-session
 # exec startkde
 # exec startxfce4
