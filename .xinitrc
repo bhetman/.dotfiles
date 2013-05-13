@@ -18,11 +18,12 @@ export GNOME_KEYRING_PID
 
 eval $(ssh-agent)
 
+[[ -f ~/.fehbg ]] && sh ~/.fehbg &
 xset +fp /usr/share/fonts/local
 xset fp rehash
 xset b 5 2800
 xbindkeys
-xmodmap ~/.Xmodmap
+[[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
 /usr/bin/xscreensaver -no-splash -no-capture-stderr &
 
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
