@@ -13,6 +13,10 @@ if has('gui_running')
   set guioptions-=T
   " Remove the menubar
   set guioptions-=m
+  " Remove the scrollbar
+  set guioptions-=r
+  " Remove the footer
+  set guioptions-=F
 endif
 
 " Enable UTF-8 editing
@@ -27,6 +31,12 @@ set undofile
 
 " Allow backspacing over autoindent, line breaks, and the start of insert
 set backspace=indent,eol,start
+
+" Auto indent by the width of a tab character
+set shiftwidth=0
+
+" Whitespace inserted with the tab key is always the width of a tab character
+set softtabstop=-1
 
 " Allow editing of new buffers when unsaved buffers exist
 set hidden
@@ -80,7 +90,7 @@ endif
 filetype plugin indent on
 
 " Enable syntax highlighting
-syntax on
+syntax enable
 
 " Use syntax based folding
 set foldmethod=syntax

@@ -1,5 +1,5 @@
 *foreground:   #eaeaea
-*background:   #000000
+XTerm*background:   #141515
 *cursorColor:  #aeafad
 !#define t_selection #34495e
 ! Black / Grey

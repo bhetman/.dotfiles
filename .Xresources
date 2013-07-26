@@ -2,6 +2,8 @@
 Xcursor.theme: Neutral
 
 .font: -*-tamsyn-medium-*-*-*-12-*-*-*-*-*-*-*
+!XTerm*font: -*-tamsyn-medium-*-*-*-14-*-*-*-*-*-*-*
+!XTerm*boldFont: -*-tamsyn-medium-*-*-*-14-*-*-*-*-*-*-*
 
 ! When using xterm, report 256colors to programs.
 XTerm*termName: xterm-256color

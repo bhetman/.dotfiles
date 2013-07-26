@@ -1,0 +1,5 @@
+input, textarea {
+	-moz-appearance: none !important;
+	background-color: white;
+	color: black;
+}

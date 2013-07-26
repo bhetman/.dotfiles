@@ -69,6 +69,7 @@ setopt longlistjobs
 setopt pushdsilent
 setopt autopushd
 setopt pushdminus
+setopt pushdignoredups
 DIRSTACKSIZE=15
 
 setopt rcexpandparam
