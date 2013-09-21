@@ -9,9 +9,9 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-exec nm-applet
-exec volumeicon
-exec batti
+#exec nm-applet
+#exec volumeicon
+#exec batti
 
 # use win-key as the modifier
 set $mod Mod4
@@ -160,3 +160,4 @@ bar {
 }
 
 for_window [class="Steam"] floating enable
+
