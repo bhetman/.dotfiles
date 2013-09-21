@@ -1,5 +1,4 @@
 " Allow manpage browsing from within Vim
-"let $PAGER=''
 runtime ftplugin/man.vim
 
 " Remove the startup splash
